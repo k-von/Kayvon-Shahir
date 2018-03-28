@@ -13,6 +13,7 @@
 body {
 
   font-family: 'Source Code Pro', monospace;
+  font-size: 1.618rem;
   width: 100%;
   /*perspective: 1px;
   perspective-origin: 0 0;*/
@@ -33,11 +34,35 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  margin: 0;
+  padding-right: 15px;
+  padding-left: 15px;
   width: 100%;
-  height: 25%;
+  height: auto;
   z-index: 9998;
   background-color: rgba(177, 206, 255, 0.52);
+}
+
+#social img {
+  width: 50px;
+}
+
+#mail_me {
+  display: block;
+  flex: 1 1 100px;
+  max-width: 100px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 1rem;
+  word-break: normal;
+  word-wrap: break-word;
+  border: 1px solid rgb(91, 155, 250);
+  padding: 0.5rem;
+  margin-right: 10px;
+  overflow: hidden;
+  letter-spacing: initial;
+  color: rgb(255,255,255);
+  border-radius: 5px;
+  text-align: center;
 }
 
 #hamburger {
@@ -50,18 +75,19 @@ nav {
 #menu {
   display: flex;
   width: 100vw;
-  height: 25%;
+  height: auto;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-around;
   margin: 0;
-  padding: 1em;
+  padding-top: 1em;
 }
 
 #menu > div {
   flex: 1 1 auto;
-  letter-spacing: 5px;
-  margin: 2em;
+  letter-spacing: 3px;
+  font-weight: bolder;
+
 }
 
 #header-background::before {
@@ -70,7 +96,7 @@ nav {
   bottom: 0;
   content: ' ';
   width: 100%;
-  height: 110vh;
+  height: 95vh;
   background-color: rgb(91, 155, 250);
   background-size: contain;
   opacity: 0.4;
@@ -80,7 +106,7 @@ nav {
 #header-background {
   position: relative;
   width: 100vw;
-  height: 110vh;
+  height: 95vh;
   background: url('/assets/img/sai-kiran-anagani-500.png') fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -97,9 +123,9 @@ nav {
   height: auto;
 /*  transform-style: preserve-3d;*/
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-end;
   overflow: visible;
 /*  transform: translateZ(0);*/
   opacity: 1;
@@ -110,46 +136,55 @@ nav {
   margin-left: 20%;
   display: inline-block;
   flex: 1 1 auto;
-  width: auto;
+  width: 75%;
   font-weight: bold;
 }
 
 #myname h1 {
-  font-size: 3em;
+  font-size: 4.854rem;
   padding: 0;
-  margin-bottom: 10px;
+  line-height: 0.8;
   color: rgb(255,255,255);
+  margin-bottom: 0;
 }
 
 #myname h3 {
-  font-size: 1.5em;
+  font-size: 2.336rem;
   color: rgb(255,255,255);
+  line-height: 1;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 hr {
+  padding: 0;
+  margin: 0;
   width: 100%;
-  line-height: 2em;
+  line-height: 1em;
   box-shadow: 1px 2px 2px 1px;
 }
 
-span {
-  font-size: 1rem;
-  line-height: 0.50em;
+#myname span {
+  font-size: 1.618rem;
+  line-height: 0.5;
   color: rgb(255,255,255);
+  margin: 0;
+  padding: 0;
 }
 
 #intro {
-  display: block;
+  display: inline-block;
+  min-width: 75%;
   color: rgb(255,255,255);
   flex: 1 1 auto;
-  align-self: flex-end;
+  align-self: flex-start;
   height: auto;
-  padding: 1em;
-  margin: 3em;
   border-radius: 5px;
   background-color: rgba(255,255,255,0.1);
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-top: 10%;
 
 }
 
@@ -177,7 +212,7 @@ section.x2 #mypicture {
   width: 250px;
   height: 250px;
   bottom: 300px;
-  background: url('/assets/img/Kayvonbw.jpg');
+  background: linear-gradient(-45deg, rgba(91, 155, 250, 0.9) 1%, rgba(91, 155, 250, 0.3)), url('/assets/img/Kayvonbw.jpg');
   background-repeat: no-repeat;
   background-size: contain;
   background-origin: content-box;
@@ -204,15 +239,18 @@ section.x3 img, section.x3 h2 {
   margin-right: auto;
   width: 100px;
   word-wrap: normal;
+  font-size: 1.618rem;
+  overflow: visible;
+  text-overflow: ellipsis;
 
 }
 
 section.x3 h1 {
-  font-size: 2rem;
+  font-size: 3.236rem;
 }
 
 section#portfolio h1 {
-  font-size: 2rem;
+  font-size: 3.236rem;
 }
 
 section#portfolio .row {
@@ -281,6 +319,9 @@ section#portfolio .card {
    cursor: pointer;
    overflow: hidden;
    overflow-wrap: normal;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
 
 }
 
@@ -293,12 +334,18 @@ section#portfolio .card:hover {
 }
 
 .card-text {
+  visibility: hidden;
   padding: 0.3em;
   display: block;
   max-width: 350px;
   text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+
+  text-align: center;
+}
+
+h2.card-title {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #excerpt {
@@ -318,6 +365,7 @@ section#portfolio .card:hover {
   left: 0;
   background-color: rgba(94, 101, 99, 0.7);
   z-index: 9999;
+  border-radius: 15px;
 }
 
 #modal-content {
@@ -365,17 +413,48 @@ section#skills div {
   padding-bottom: 2em;
 }
 
+section#resume {
+
+  padding: 0;
+  margin: 0;
+}
 section#resume  div{
   width: 100%;
   background-color: rgb(91, 155, 250);
   color: rgb(255,255,255);
+  margin: 0;
+  padding: 1em;
 }
 
 section#resume h1 {
   color: rgb(255,255,255);
 }
 
-@media screen and (max-width: 375px) {
+section#resume h2 {
+  width: 100%;
+  color: rgb(0,0,0);
+}
+
+#resume img {
+  display: inline;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  background-color: rgb(0,0,0);
+  color: rgb(255,255,255);
+  padding: 1em;
+}
+
+footer h4 {
+  font-size: 0.618em;
+}
+
+@media screen and (max-width: 414px) {
 
 body {
   font-size-adjust: 0.75;
@@ -401,9 +480,9 @@ body {
    top: 0;
    bottom: 0;
    width: 100vw;
-   height: 25vh;
+   height: auto;
    background-color: rgba(0,0,0,0);
-   overflow: visible;
+   overflow: hidden;
 
  }
 
@@ -417,6 +496,7 @@ body {
    width: 50px;
    height: 50px;
    z-index: 1;
+   overflow: visible;
 
  }
 
@@ -455,26 +535,45 @@ body {
 
 
  #menu {
-   position: absolute;
+   position: relative;
    display: flex;
    flex-flow: column nowrap;
    justify-content: flex-start;
    width: 100%;
-   height: 100%;
+   height: auto;
    overflow: hidden;
    background-color: rgba(81, 164, 116,0.3);
 
  }
 
 
-
-
  #menu > div {
-   flex: 0 0 auto;
+   flex: 1 1 auto;
    letter-spacing: 2px;
-   margin: 1em;
+   margin: 0em;
    padding: 0;
+   font-weight: bold;
  }
 
+#menu > div a {
+  font-weight: bold;
+
+}
+
+#menu > div a:visited {
+  font-weight: bold;
+}
+
+#header-background::before {
+  height: 140vh;
+}
+
+#header-background {
+  height: 140vh;
+}
+
+section.x3 {
+  flex-flow: column wrap;
+}
 
 }
