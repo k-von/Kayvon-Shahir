@@ -356,7 +356,8 @@ section#portfolio .card:hover {
 
 .card-text {
   visibility: hidden;
-  padding: 0.3em;
+
+  padding: 1em;
   display: block;
   max-width: 350px;
   text-overflow: ellipsis;
@@ -373,8 +374,9 @@ h2.card-title {
   width: 95%;
   background-color: rgba(168, 211, 244, 0.53);
   position: relative;
-  bottom: 10%;
+  bottom: 10em;
   margin: auto;
+  padding: 1em;
 }
 
 #modal {
@@ -521,13 +523,13 @@ body {
    margin-top: 20%;
    box-sizing: border-box;
    transform: rotate(0deg);
-   transition: all 0.3s linear 0;
+   transition: all 0.3s;
  }
 
  div#hamburger.ham-open div:first-child{
    transform-origin: center center;
    transform: rotate(-45deg) translate(-10px,11px);
-   transition: all 0.3s linear 0;
+   transition: all 0.3s;
 
  }
 
@@ -535,13 +537,13 @@ body {
    transform: rotate(-90deg);
    transform-origin: center center;
    transform: rotateY(90deg);
-   transition: all 0.3s linear 0;
+   transition: all 0.3s;
  }
 
  div#hamburger.ham-open div:nth-child(3) {
    transform-origin: center center;
    transform: rotate(45deg) translate(-5px,-7px);
-   transition: all 0.3s linear 0;
+   transition: all 0.3s;
 
  }
 
