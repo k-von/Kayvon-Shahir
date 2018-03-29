@@ -189,10 +189,10 @@ hr {
   display: inline-block;
   flex: 1 1 auto;
   font-size: 1.618rem;
-  line-height: 0.5;
+  line-height: 1;
   color: rgb(255,255,255);
   margin: 0;
-  padding: 0;
+  padding: 0.2em;
 }
 
 div#intro {
@@ -480,7 +480,7 @@ footer h4 {
 @media screen and (max-width: 414px) {
 
 body {
-  font-size-adjust: 0.60;
+  font-size-adjust: 0.50;
 }
 
  nav {
@@ -549,18 +549,18 @@ body {
 
 
 #header-background::before {
-  min-height: 125vh;
+  min-height: 150vh;
 }
 
 #header-background {
-  min-height: 125vh;
+  min-height: 150vh;
 }
 
-span {
-  font-size-adjust: 0.5;
-  line-height: 2.5;
-  word-wrap: normal;
+#myname {
+  margin-left: 0;
+
 }
+
 section.x3 {
   flex-flow: column wrap;
 }
