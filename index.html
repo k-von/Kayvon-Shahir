@@ -10,29 +10,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css" type="text/css">
+
     <style>
       @import url('https://fonts.googleapis.com/css?family=Arima+Madurai:900|Inconsolata:900|Source+Code+Pro:400');
     </style>
   </head>
 
   <body>
-    <nav>
-
-      <div id="menu" class="close-menu">
-        <div><a href="#mypicture">about</a></div>
-        <div><a href="#portfolio">portfolio</a></div>
-        <div><a href="#resume">resume</a></div>
+    <script src="/js/custom.js"></script>
+    <nav class="close-menu">
+      <div id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div id="menu">
+        <div><a href="#mypicture" onclick="openMenu(this.event);">about</a></div>
+        <div><a href="#portfolio" onclick="openMenu(this.event);">portfolio</a></div>
+        <div><a href="#resume" onclick="openMenu(this.event);">resume</a></div>
         <div id="social"><a href="https://www.facebook.com/kayvon77" target="_blank"><img src="assets/img/if_-04_3057625.svg" alt="facebook"></a>
           <a href="https://www.linkedin.com/in/kayvonshahir" target="_blank"><img src="assets/img/if_-15_3057688.svg" alt="Linked-in"></a>
           <a href="https://www.github.com/k-von" target="_blank"> <img src="assets/img/if_-41_3057638.svg" alt="Github"></a>
         </div>
         <a id="mail_me" href="mailto:kayvons@icloud.com?subject=inquiry&body=I have a dream I want you to make come true...">Send Me eMail</a>
       </div>
-      <div id="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+
     </nav>
 
     <header>
@@ -249,7 +251,7 @@ Wikepedia Viewer
       }
     </script>
 
-    <script src="/js/custom.js"></script>
+
   </body>
 
 </html>
