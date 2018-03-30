@@ -3,11 +3,11 @@
 
 
   <head>
-    <title>Kayvon Shahir, Web Developer</title>
+    <title>Kayvon Shahir, Web Developer and Technological Business Solutions Specialist</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="Kayvon Shahir">
-    <meta name="description" content="my New Portfolio Site">
-    <meta charset="UTF-8">
+    <meta name="author" content="Kayvon Shahir">
+    <meta name="description" content="Web Development and Design">
+    <meta name="keywords" content="web developer, web designer, html, css, JavaScript developer, web agency, los angeles web design, web design firm" <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css" type="text/css">
 
@@ -202,7 +202,7 @@ Wikepedia Viewer
                 <img src="/assets/img/close.svg" alt="close window">
               </div>
 
-              <iframe sandbox="allow-same-origin allow-modals" frameborder=0>sorry, your browser doesn't support</iframe>
+              <iframe sandbox="allow-same-origin allow-modals" frameborder=0>sorry, your browser doesn't support iframes, so you're not getting the full experience.</iframe>
             </div>
             <div id="excerpt"></div>
 
@@ -242,7 +242,7 @@ Wikepedia Viewer
     <script>
       function displayModal(event) {
 
-        console.log(event.currentTarget);
+
         var projectExcerpt = event.currentTarget.querySelector(".card-text");
         var myModal = document.getElementById("modal");
         myModal.querySelector("#excerpt").textContent = projectExcerpt.textContent;
@@ -252,13 +252,26 @@ Wikepedia Viewer
         modalIframe.setAttribute('src',
           event.currentTarget.querySelector("iframe").getAttribute('src'));
         modalIframe.setAttribute('sandbox', "allow-same-origin allow-modals allow-popups allow-scripts");
+        console.log(event.currentTarget.id);
+        if (event.currentTarget.id == "psdtohtml") {
+          var psdtohtmlImg = document.createElement("img");
+          psdtohtmlImg.setAttribute("src", "CT_SkillTest_v3.png");
+          psdtohtmlImg.setAttribute("id", "pop-up");
 
+          myModal.appendChild(psdtohtmlImg);
+        }
 
 
       }
 
       function closeModal() {
         var myModal = document.getElementById("modal");
+        var psdtohtmlImg = myModal.querySelector("#pop-up");
+        if (psdtohtmlImg !== null) {
+          if (psdtohtmlImg.id == "pop-up") {
+            myModal.removeChild(myModal.lastChild);
+          }
+        }
         myModal.querySelector("iframe").setAttribute('src', "about:blank");
         myModal.style.display = "none";
 
