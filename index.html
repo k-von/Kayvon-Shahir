@@ -9,30 +9,36 @@
     <meta name="description" content="my New Portfolio Site">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <style>
-      @import url('https://fonts.googleapis.com/css?family=Arima+Madurai:900|Inconsolata:900|Source+Code+Pro:400');
+      @import  url('https://fonts.googleapis.com/css?family=Arima+Madurai:900|Inconsolata:900|Source+Code+Pro:400');
     </style>
   </head>
 
   <body>
-    <nav>
-
-      <div id="menu" class="close-menu">
-        <div><a href="#mypicture">about</a></div>
-        <div><a href="#portfolio">portfolio</a></div>
-        <div><a href="#resume">resume</a></div>
-        <div id="social"><a href="https://www.facebook.com/kayvon77" target="_blank"><img src="assets/img/if_-04_3057625.svg" alt="facebook"></a>
-          <a href="https://www.linkedin.com/in/kayvonshahir" target="_blank"><img src="assets/img/if_-15_3057688.svg" alt="Linked-in"></a>
-          <a href="https://www.github.com/k-von" target="_blank"> <img src="assets/img/if_-41_3057638.svg" alt="Github"></a>
-          </div>
-          <a id="mail_me" href="mailto:kayvons@icloud.com?subject=inquiry&body=I have a dream I want you to make come true...">Send Me eMail</a>
-    </div>
-      <div id="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
+    <nav class="navbar navbar-expand-md">
+      <div class="container-fluid">
+      <div class="nav-toggler">
+        <div id="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
+      <div class="navbar-nav mx-auto">
+      <div id="menu" class="collapse navbar-collapse">
+        <div class="nav-item"><a class="nav-link" href="#mypicture">about</a></div>
+        <div class="nav-item"><a class="nav-link" href="#portfolio">portfolio</a></div>
+        <div class="nav-item"><a class="nav-link" href="#resume">resume</a></div>
+        <div  class="nav-item" id="social"><a class="nav-link" href="https://www.facebook.com/kayvon77" target="_blank"><img src="assets/img/if_-04_3057625.svg" alt="facebook"></a>
+          <a class="nav-link" href="https://www.linkedin.com/in/kayvonshahir" target="_blank"><img src="assets/img/if_-15_3057688.svg" alt="Linked-in"></a>
+          <a class="nav-link" href="https://www.github.com/k-von" target="_blank"> <img src="assets/img/if_-41_3057638.svg" alt="Github"></a>
+          </div>
+          <a class="nav-link btn btn-outline-secondary" id="mail_me" href="mailto:kayvons@icloud.com?subject=inquiry&body=I have a dream I want you to make come true...">Send Me eMail</a>
+    </div>
+  </div>
+</div>
     </nav>
 
     <header>
@@ -106,7 +112,7 @@
           <div id="topagentmagazine" class="card" onclick="displayModal(event);">
             <div class="thumbnail-container">
               <div class="thumbnail">
-                <iframe src="https://www.topagentmagazine.com" frameborder=0></iframe>
+                <iframe src="https://www.topagentmagazine.com" frameborder=0 ></iframe>
               </div>
             </div>
 
@@ -119,7 +125,7 @@
           <div id="themotherandsonteam" class="card" onclick="displayModal(event);">
             <div class="thumbnail-container">
               <div class="thumbnail">
-                <iframe src="https://themotherandsonteam.com" frameborder=0 sandbox="allow-same-origin allow-modals allow-popups allow-scripts"></iframe>
+                <iframe src="https://themotherandsonteam.com" frameborder=0 ></iframe>
               </div>
             </div>
             <h2 class="card-title">
@@ -131,7 +137,7 @@
           <div id="reobrokerssite" class="card" onclick="displayModal(event);">
             <div class="thumbnail-container">
               <div class="thumbnail">
-                <iframe src="https://v1.kayvonshahir.com/" frameborder="0" sandbox="allow-same-origin allow-modals allow-popups allow-scripts"></iframe>
+                <iframe src="https://v1.kayvonshahir.com/" frameborder="0" ></iframe>
               </div>
             </div>
             <h2 class="card-title">
@@ -143,7 +149,7 @@
           <div id="simon-says" class="card" onclick="displayModal(event);">
             <div class="thumbnail-container">
               <div class="thumbnail">
-                <iframe scrolling='no' title='Simon Says Games' src='//codepen.io/k-von/embed/baEZZb/?theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' sandbox="allow-same-origin allow-scripts allow-popups ">See the Pen <a href='https://codepen.io/k-von/pen/baEZZb/'>Simon Says Games</a> by Kayvon Shahir (<a href='https://codepen.io/k-von'>@k-von</a>) on <a href='https://codepen.io'>CodePen</a>.
+                <iframe scrolling='no' title='Simon Says Games' src='//codepen.io/k-von/embed/baEZZb/?theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' >See the Pen <a href='https://codepen.io/k-von/pen/baEZZb/'>Simon Says Games</a> by Kayvon Shahir (<a href='https://codepen.io/k-von'>@k-von</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
               </div>
             </div>
@@ -156,7 +162,7 @@ Simon Says Game
           <div id="wikepedia-viewer" class="card" onclick="displayModal(event);">
             <div class="thumbnail-container">
               <div class="thumbnail">
-                <iframe scrolling='no' title='Wikepedia Viewer' src='//codepen.io/k-von/embed/xqZgMq/?theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' sandbox="allow-same-origin allow-scripts allow-popups ">See the Pen <a href='https://codepen.io/k-von/pen/xqZgMq/'>Wikepedia Viewer</a> by Kayvon Shahir (<a href='https://codepen.io/k-von'>@k-von</a>) on <a href='https://codepen.io'>CodePen</a>.
+                <iframe scrolling='no' title='Wikepedia Viewer' src='//codepen.io/k-von/embed/xqZgMq/?theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true'>See the Pen <a href='https://codepen.io/k-von/pen/xqZgMq/'>Wikepedia Viewer</a> by Kayvon Shahir (<a href='https://codepen.io/k-von'>@k-von</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
               </div>
             </div>
@@ -169,7 +175,7 @@ Wikepedia Viewer
           <div id="quote-generator" class="card" onclick="displayModal(event);">
             <div class="thumbnail-container">
               <div class="thumbnail">
-                <iframe scrolling='no' title='Quote Generator' src='https://codepen.io/k-von/embed/apryEw/?theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' sandbox="allow-same-origin allow-scripts allow-popups ">See the Pen <a href='https://codepen.io/k-von/pen/apryEw/'>Quote Generator</a> by Kayvon Shahir (<a href='https://codepen.io/k-von'>@k-von</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>
+                <iframe scrolling='no' title='Quote Generator' src='https://codepen.io/k-von/embed/apryEw/?theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' >See the Pen <a href='https://codepen.io/k-von/pen/apryEw/'>Quote Generator</a> by Kayvon Shahir (<a href='https://codepen.io/k-von'>@k-von</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>
               </div>
             </div>
             <h2 class="card-title">
@@ -210,7 +216,7 @@ Wikepedia Viewer
         <div >
           <h1>Resume</h1>
           <h2>Download my work experience to learn more.</h2>
-          <a href="kayvonshahirresume-revised-cy.docx" download><img src="assets/img/download_icon.png" alt="Download Resume"></a>
+          <a href="myResume.pdf" download><img src="assets/img/download_icon.png" alt="Download Resume"></a>
 
         </div>
       </section>
@@ -247,7 +253,8 @@ Wikepedia Viewer
 
       }
     </script>
-
+    <script src="bootstrap/dist/js/jquery-slim.min.js" type="javascript"></script>
+    <script src="bootstrap/dist/js/bootstrap.bundle.js" type="javascript"></script>
     <script src="/js/custom.js"></script>
   </body>
 

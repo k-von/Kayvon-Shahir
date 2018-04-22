@@ -30,65 +30,8 @@ h1,h2,h3,h4,h5,h6 {
   color: rgb(91, 155, 250);
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-right: 15px;
-  padding-left: 15px;
-  width: 100%;
-  height: auto;
-  z-index: 9998;
-  background-color: rgba(177, 206, 255, 0.52);
-}
 
-#social img {
-  width: 50px;
-}
 
-#mail_me {
-  display: block;
-  flex: 1 1 100px;
-  max-width: 100px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  font-size: 1rem;
-  word-break: normal;
-  word-wrap: break-word;
-  border: 1px solid rgb(91, 155, 250);
-  padding: 0.5rem;
-  margin-right: 10px;
-  overflow: hidden;
-  letter-spacing: initial;
-  color: rgb(255,255,255);
-  border-radius: 5px;
-  text-align: center;
-}
-
-#hamburger {
-  visibility: hidden;
-  width: 50px;
-  height: 50px;
-
-}
-
-#menu {
-  display: flex;
-  width: 100vw;
-  height: auto;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-around;
-  margin: 0;
-  padding-top: 1em;
-}
-
-#menu > div {
-  flex: 1 1 auto;
-  letter-spacing: 3px;
-  font-weight: bolder;
-
-}
 
 #header-background::before {
   position: absolute;
