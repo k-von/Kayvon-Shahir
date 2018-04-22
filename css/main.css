@@ -7,14 +7,25 @@
     font-family: 'Source Code Pro', monospace;
 
 /*/
-
+#pop-up {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 1rem;
+  padding: 1rem;
+  width: 25%;
+  height: auto;
+  border: 1px solid rgb(82, 63, 75);
+  z-index: 9998;
+}
 
 
 body {
 
   font-family: 'Source Code Pro', monospace;
   font-size: 1.618rem;
-  width: 100%;
+  width: 100vw;
   /*perspective: 1px;
   perspective-origin: 0 0;*/
   overflow-y: scroll;
@@ -32,14 +43,57 @@ h1,h2,h3,h4,h5,h6 {
 
 
 
+#hamburger {
+  flex: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  width: 50px;
+  height: 50px;
+  z-index: 900;
+
+}
+
+#menu {
+  position: relative;
+  left: -15px;
+  top: 0;
+  display: flex;
+  flex: 3;
+  width: 100%;
+  height: auto;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0;
+  padding-top: 1em;
+  background-color: rgba(157, 123, 230,0.8);
+}
+
+
+
+a#mail_me {
+  max-width: 200px;
+  display: block;
+  margin-right: 0 3em;
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+div#social {
+  flex: 3;
+}
 
 #header-background::before {
+  display: flex;
+  flex-flow: column wrap;
   position: absolute;
   right: 0;
   bottom: 0;
   content: ' ';
   width: 100%;
-  height: 95vh;
+  height: 100%;
   background-color: rgb(91, 155, 250);
   background-size: contain;
   opacity: 0.4;
@@ -47,9 +101,13 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #header-background {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: flex-start;
   position: relative;
   width: 100vw;
-  height: 95vh;
+  min-height: 100vh;
   background: url('/assets/img/sai-kiran-anagani-500.png') fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -63,12 +121,14 @@ h1,h2,h3,h4,h5,h6 {
   position: absolute;
   left: 0;
   top: 10%;
+  width: 100%;
   height: auto;
 /*  transform-style: preserve-3d;*/
   display: flex;
+  flex: 1 1 auto;
   flex-flow: column wrap;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-around;
   overflow: visible;
 /*  transform: translateZ(0);*/
   opacity: 1;
@@ -77,13 +137,18 @@ h1,h2,h3,h4,h5,h6 {
 #myname {
   margin-top: 5%;
   margin-left: 20%;
-  display: inline-block;
   flex: 1 1 auto;
-  width: 75%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 75%;
+  height: auto;
   font-weight: bold;
 }
 
 #myname h1 {
+  flex: 1 1 auto;
   font-size: 4.854rem;
   padding: 0;
   line-height: 0.8;
@@ -92,15 +157,16 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #myname h3 {
+  flex: 1 1 auto;
   font-size: 2.336rem;
   color: rgb(255,255,255);
   line-height: 1;
-  margin-top: 2rem;
-  margin-bottom: 0;
-  padding: 0;
+
 }
 
 hr {
+  flex: 0 0 auto;
+  display: block;
   padding: 0;
   margin: 0;
   width: 100%;
@@ -109,26 +175,27 @@ hr {
 }
 
 #myname span {
+  display: inline-block;
+  flex: 1 1 auto;
   font-size: 1.618rem;
-  line-height: 0.5;
+  line-height: 1;
   color: rgb(255,255,255);
   margin: 0;
-  padding: 0;
+  padding: 0.2em;
 }
 
-#intro {
-  display: inline-block;
-  min-width: 75%;
+div#intro {
+  min-width: 400px;
+  max-width: 700px;
   color: rgb(255,255,255);
   flex: 1 1 auto;
-  align-self: flex-start;
-  height: auto;
+  height: 100%;
   border-radius: 5px;
   background-color: rgba(255,255,255,0.1);
-  overflow: hidden;
+  overflow: visible;
   text-overflow: ellipsis;
-  margin-top: 10%;
-
+  text-align: justify;
+  padding: 0.5em;
 }
 
 
@@ -278,7 +345,8 @@ section#portfolio .card:hover {
 
 .card-text {
   visibility: hidden;
-  padding: 0.3em;
+
+  padding: 1em;
   display: block;
   max-width: 350px;
   text-overflow: ellipsis;
@@ -295,14 +363,16 @@ h2.card-title {
   width: 95%;
   background-color: rgba(168, 211, 244, 0.53);
   position: relative;
-  bottom: 10%;
+  bottom: 10em;
   margin: auto;
+  padding: 1em;
+  z-index: 9999;
 }
 
 #modal {
   display: none;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
@@ -400,45 +470,37 @@ footer h4 {
 @media screen and (max-width: 414px) {
 
 body {
-  font-size-adjust: 0.75;
+  font-size-adjust: 0.50;
 }
 
-  .close-menu {
-    left: -110%;
-    -moz-transition: left 500ms linear 0;
-    transition: left 500ms linear 0;
-  }
-
-  .open-menu {
-     left: 0px;
-     -moz-transition: left 500ms linear 0;
-     transition: left 500ms linear 0;
-
-
-  }
-
  nav {
-   display: block;
-   position: fixed;
-   top: 0;
-   bottom: 0;
+   display: flex;
+   flex-flow: column wrap;
    width: 100vw;
    height: auto;
-   background-color: rgba(0,0,0,0);
-   overflow: hidden;
+   overflow: visible;
 
  }
 
+ #menu {
+   flex-flow: column wrap;
+ }
+
+ .close-menu {
+   left: -500px;
+   right: 500px;
+   transition: left 2s, right 2s;
+ }
+
+ .open-menu {
+   left: 0px;
+   right: 0;
+   transition: left 2s, right 2s;
+ }
+
+
 #hamburger {
-  box-sizing: border-box;
-  padding: 0;
-   position: absolute;
-   top: 0;
-   left: 0;
    visibility: visible;
-   width: 50px;
-   height: 50px;
-   z-index: 1;
    overflow: visible;
 
  }
@@ -451,13 +513,13 @@ body {
    margin-top: 20%;
    box-sizing: border-box;
    transform: rotate(0deg);
-   transition: all 0.3s linear 0;
+   transition: all 0.3s;
  }
 
  div#hamburger.ham-open div:first-child{
    transform-origin: center center;
    transform: rotate(-45deg) translate(-10px,11px);
-   transition: all 0.3s linear 0;
+   transition: all 0.3s;
 
  }
 
@@ -465,54 +527,28 @@ body {
    transform: rotate(-90deg);
    transform-origin: center center;
    transform: rotateY(90deg);
-   transition: all 0.3s linear 0;
+   transition: all 0.3s;
  }
 
  div#hamburger.ham-open div:nth-child(3) {
    transform-origin: center center;
    transform: rotate(45deg) translate(-5px,-7px);
-   transition: all 0.3s linear 0;
+   transition: all 0.3s;
 
  }
 
-
-
- #menu {
-   position: relative;
-   display: flex;
-   flex-flow: column nowrap;
-   justify-content: flex-start;
-   width: 100%;
-   height: auto;
-   overflow: hidden;
-   background-color: rgba(81, 164, 116,0.3);
-
- }
-
-
- #menu > div {
-   flex: 1 1 auto;
-   letter-spacing: 2px;
-   margin: 0em;
-   padding: 0;
-   font-weight: bold;
- }
-
-#menu > div a {
-  font-weight: bold;
-
-}
-
-#menu > div a:visited {
-  font-weight: bold;
-}
 
 #header-background::before {
-  height: 140vh;
+  min-height: 150vh;
 }
 
 #header-background {
-  height: 140vh;
+  min-height: 150vh;
+}
+
+#myname {
+  margin-left: 0;
+
 }
 
 section.x3 {
