@@ -7,32 +7,20 @@
     font-family: 'Source Code Pro', monospace;
 
 /*/
-#pop-up {
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin: 1rem;
-  padding: 1rem;
-  width: 25%;
-  height: auto;
-  border: 1px solid rgb(82, 63, 75);
-  z-index: 9998;
-}
+
 
 
 body {
 
   font-family: 'Source Code Pro', monospace;
-  font-size: 1.618rem;
   width: 100vw;
   /*perspective: 1px;
   perspective-origin: 0 0;*/
-  overflow-y: scroll;
+  /*overflow-y: scroll;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  overflow-wrap: break-word;
+  overflow-wrap: break-word;*/
 
 }
 
@@ -42,48 +30,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
-
-#hamburger {
-  flex: 1;
-  position: fixed;
-  top: 0;
-  left: 0;
-  visibility: hidden;
-  width: 50px;
-  height: 50px;
-  z-index: 900;
-
-}
-
-#menu {
-  position: relative;
-  left: -15px;
-  top: 0;
-  display: flex;
-  flex: 3;
-  width: 100%;
-  height: auto;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-around;
-  margin: 0;
-  padding-top: 1em;
-  background-color: rgba(157, 123, 230,0.8);
-}
-
-
-
-a#mail_me {
-  max-width: 200px;
-  display: block;
-  margin-right: 0 3em;
-  flex: 1 1 auto;
-  text-align: center;
-}
-
-div#social {
-  flex: 3;
-}
 
 #header-background::before {
   display: flex;
@@ -116,61 +62,17 @@ div#social {
 }
 
 
-
-#container {
-  position: absolute;
-  left: 0;
-  top: 10%;
-  width: 100%;
-  height: auto;
-/*  transform-style: preserve-3d;*/
-  display: flex;
-  flex: 1 1 auto;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: space-around;
-  overflow: visible;
-/*  transform: translateZ(0);*/
-  opacity: 1;
-}
-
-#myname {
-  margin-top: 5%;
-  margin-left: 20%;
-  flex: 1 1 auto;
-  display: flex;
-  flex-flow: column wrap;
-  align-items: flex-start;
-  justify-content: flex-start;
-  min-width: 75%;
-  height: auto;
-  font-weight: bold;
-}
-
 #myname h1 {
-  flex: 1 1 auto;
-  font-size: 4.854rem;
-  padding: 0;
-  line-height: 0.8;
   color: rgb(255,255,255);
-  margin-bottom: 0;
 }
 
 #myname h3 {
-  flex: 1 1 auto;
-  font-size: 2.336rem;
   color: rgb(255,255,255);
   line-height: 1;
-
 }
 
-hr {
-  flex: 0 0 auto;
-  display: block;
-  padding: 0;
-  margin: 0;
+#myname hr {
   width: 100%;
-  line-height: 1em;
   box-shadow: 1px 2px 2px 1px;
 }
 
@@ -185,17 +87,11 @@ hr {
 }
 
 div#intro {
-  min-width: 400px;
-  max-width: 700px;
+
   color: rgb(255,255,255);
-  flex: 1 1 auto;
-  height: 100%;
-  border-radius: 5px;
+
   background-color: rgba(255,255,255,0.1);
-  overflow: visible;
-  text-overflow: ellipsis;
-  text-align: justify;
-  padding: 0.5em;
+
 }
 
 
@@ -215,13 +111,13 @@ display: block;
 
 }
 
+
 section.x2 #mypicture {
   display: inline;
   content: " ";
-  float: right;
+  margin-top: -7em;
   width: 250px;
   height: 250px;
-  bottom: 300px;
   background: linear-gradient(-45deg, rgba(91, 155, 250, 0.9) 1%, rgba(91, 155, 250, 0.3)), url('/assets/img/Kayvonbw.jpg');
   background-repeat: no-repeat;
   background-size: contain;
@@ -231,193 +127,37 @@ section.x2 #mypicture {
 
 }
 
-section.x3 {
-  position: relative;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-around;
-  background-color: rgb(229, 226, 232);
-  padding: 1em;
-
+a.truncate-text:link, a.truncate-text:active, a.truncate-text:hover {
+  text-decoration: none;
 }
 
-
-section.x3 img, section.x3 h2 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100px;
-  word-wrap: normal;
-  font-size: 1.618rem;
-  overflow: visible;
-  text-overflow: ellipsis;
-
+#icons img{
+  max-width: 10rem;
 }
 
-section.x3 h1 {
-  font-size: 3.236rem;
-}
-
-section#portfolio h1 {
-  font-size: 3.236rem;
-}
-
-section#portfolio .row {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-
-
-/*.thumbnail {
-  max-width: 100%;
-  height: auto;
-}*/
-
-.thumbnail iframe {
- width: 1440px;
- height: 900px;
-
-}
-
-.thumbnail {
-  position: relative;
-  -ms-zoom: 0.25;
-  -moz-transform: scale(0.25);
-  -moz-transform-origin: 0 0;
-  -o-transform: scale(0.25);
-  -o-transform-origin: 0 0;
-  -webkit-transform: scale(0.25);
-  -webkit-transform-origin: 0 0;
-  transform: scale(0.25);
-  transform-origin: 0 0;
-}
-
-
-
-.thumbnail-container {
-width: calc(1440px * 0.25);
-  height: calc(900px * 0.25);
-  display: inline-block;
-  overflow: hidden;
-  position: relative;
-}
-
-.thumbnail-container:after {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
 
 section#portfolio .card {
-  display: inline-block;
-   margin: 1em;
-   padding: 0.5em;
-   flex: 0 1 360px;
-   border-radius: 5px;
-   height: 350px;
-   max-height: 350px;
-   box-shadow: 4px 5px 10px 1px;
-   cursor: pointer;
-   overflow: hidden;
-   overflow-wrap: normal;
-   margin-left: auto;
-   margin-right: auto;
-   text-align: center;
-
+min-width: 350px;
+max-width: 350px;
 }
 
-section#portfolio .card:hover {
-  box-shadow: 4px 5px 1px 1px;
-  border: 0.02px solid;
-  opacity: 0.5;
-  cursor: pointer;
+section#portfolio .card-body {
+  word-break: break-all;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+}
+section#portfolio .card-title {
+  word-break: break-word;
+  overflow-wrap: break-all;
 
 }
 
 .card-text {
-  visibility: hidden;
-
-  padding: 1em;
-  display: block;
-  max-width: 350px;
-  text-overflow: ellipsis;
-
-  text-align: center;
-}
-
-h2.card-title {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#excerpt {
-  width: 95%;
-  background-color: rgba(168, 211, 244, 0.53);
-  position: relative;
-  bottom: 10em;
-  margin: auto;
-  padding: 1em;
-  z-index: 9999;
-}
-
-#modal {
   display: none;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(94, 101, 99, 0.7);
-  z-index: 9999;
-  border-radius: 15px;
 }
 
-#modal-content {
-  display: block;
-  width: 95%;
-  height: 95%;
-  margin: auto;
-  background-color: rgba(149, 160, 180, 0.9);
-  border-radius: 15px;
-  box-shadow: 10px 20px 20px 5px;
-  padding: 0;
-  overflow: hidden;
-  box-sizing: content-box;
 
-}
 
-#modal-content iframe {
-  padding: 0;
-  margin: auto;
-  margin-top: 5px;
-  display: block;
-  width: 98%;
-  height: 98%;
-  border-radius: 10px;
-  box-sizing: border-box;
-}
-
-.close {
- position: absolute;
- width: 15px;
- right: 1.5em;
- top: 1.5em;
-
-}
-
-.close:hover {
-  width: 30px;
-  cursor: pointer;
-}
 
 section#skills div {
   width: 100%;
@@ -426,25 +166,18 @@ section#skills div {
   padding-bottom: 2em;
 }
 
-section#resume {
-
-  padding: 0;
-  margin: 0;
-}
 section#resume  div{
-  width: 100%;
   background-color: rgb(91, 155, 250);
   color: rgb(255,255,255);
-  margin: 0;
-  padding: 1em;
-}
 
-section#resume h1 {
-  color: rgb(255,255,255);
 }
 
 section#resume h2 {
-  width: 100%;
+  color: rgb(255,255,255);
+}
+
+section#resume h3 {
+
   color: rgb(0,0,0);
 }
 
@@ -463,9 +196,6 @@ footer {
   padding: 1em;
 }
 
-footer h4 {
-  font-size: 0.618em;
-}
 
 @media screen and (max-width: 414px) {
 
@@ -473,69 +203,9 @@ body {
   font-size-adjust: 0.50;
 }
 
- nav {
-   display: flex;
-   flex-flow: column wrap;
-   width: 100vw;
-   height: auto;
-   overflow: visible;
-
- }
-
- #menu {
-   flex-flow: column wrap;
- }
-
- .close-menu {
-   left: -500px;
-   right: 500px;
-   transition: left 2s, right 2s;
- }
-
- .open-menu {
-   left: 0px;
-   right: 0;
-   transition: left 2s, right 2s;
- }
-
-
-#hamburger {
-   visibility: visible;
-   overflow: visible;
-
- }
-
- #hamburger div {
-   width: 100%;
-   height: 1px;
-   border: 1px solid black;
-   padding: 0;
-   margin-top: 20%;
-   box-sizing: border-box;
-   transform: rotate(0deg);
-   transition: all 0.3s;
- }
-
- div#hamburger.ham-open div:first-child{
-   transform-origin: center center;
-   transform: rotate(-45deg) translate(-10px,11px);
-   transition: all 0.3s;
-
- }
-
- div#hamburger.ham-open div:nth-child(2) {
-   transform: rotate(-90deg);
-   transform-origin: center center;
-   transform: rotateY(90deg);
-   transition: all 0.3s;
- }
-
- div#hamburger.ham-open div:nth-child(3) {
-   transform-origin: center center;
-   transform: rotate(45deg) translate(-5px,-7px);
-   transition: all 0.3s;
-
- }
+#iframeModal {
+  width: 100%;f
+}
 
 
 #header-background::before {
@@ -551,8 +221,6 @@ body {
 
 }
 
-section.x3 {
-  flex-flow: column wrap;
-}
+
 
 }
