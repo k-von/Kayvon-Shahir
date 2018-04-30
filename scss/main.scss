@@ -1,0 +1,298 @@
+/*/
+
+    font-family: 'Inconsolata', monospace;
+
+    font-family: 'Arima Madurai', cursive;
+
+    font-family: 'Source Code Pro', monospace;
+
+/*/
+@import '~bootstrap/scss/_custom';
+@import '~bootstrap/scss/bootstrap';
+
+html {
+  font-size: 0.9rem;
+}
+
+body {
+  font-family: 'Source Code Pro', monospace;
+/*  width: 100vw;
+  height: 100vh;
+  perspective: 1px;
+  perspective-origin: 0 0;
+  overflow-y: scrolal;
+  overflow-x: hidden;*/
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inconsolata', monospace;
+  color: rgb(91, 155, 250);
+
+}
+
+#perspectiveContainer {
+
+  perspective: 1px;
+  perspective-origin: top;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+header {
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform-style: preserve-3d;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+}
+
+#header-background::before {
+  content: ' ';
+  display: flex;
+  flex-flow: column wrap;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  content: ' ';
+  width: 100vw;
+  height: 100vh;
+    background: url('/assets/img/sai-kiran-anagani-500.png') fixed;
+  /*background-color: rgb(91, 155, 250);*/
+  background-size: cover;
+  opacity: 1;
+  box-shadow: 1px 1px 5px 3px;
+  transform-style: preserve-3d;
+  filter: blur(5px);
+
+}
+
+
+#header-background {
+  content: ' ';
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: white;
+
+  opacity: 0.9;
+  transform-style: preserve-3d;
+
+
+}
+
+
+
+#topLevel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform-style: preserve-3d;
+  transform: translateZ(0.5px) scale(0.5);
+  width: 100vw;
+  height: 100vh;
+  /* background-color: rgb(91, 155, 250) */;
+  opacity: 1;
+
+}
+#topLevel h1{
+  color: rgba(255,255,255,0.2);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    line-height: 10rem;
+}
+
+
+
+#topMiddle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  transform-style: preserve-3d;
+  transform: translateZ(-0.1px) scale(1.1);
+
+
+}
+
+#topMiddle h2 {
+  position: absolute;
+  top: 61.8%;
+  word-break: normal;
+
+
+}
+
+#middle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: translateZ(-0.4px) scale(1.4);
+}
+
+#middle h3 {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+}
+
+
+
+#intro {
+  position: absolute;
+  top: 38.2%;
+  left:0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  transform-style: preserve-3d;
+  transform: translateZ(-1px) scale(1.7);
+
+
+}
+
+#intro p {
+color: rgb(91, 155, 250);
+
+}
+
+
+#topLevel hr {
+  width: 100%;
+  box-shadow: 1px 2px 2px 1px;
+}
+
+
+
+
+section.x2 {
+  display: inline-block;
+  position: relative;
+  color: rgb(91, 155, 250);
+  padding: 1em;
+  line-height: 1.75;
+  overflow: visible;
+}
+
+section.x2 p {
+  display: block;
+  width: 100%;
+}
+
+section.x2 #mypicture {
+  display: inline;
+  content: " ";
+  margin-top: -7em;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle farthest-corner at bottom right, rgba(255,255,255,1) 25px, rgba(34,146,221,0.77) 35%, rgba(37,140,239,0.31) 80%), url('/assets/img/Kayvonbw.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: content-box;
+  border-radius: 50%;
+  box-shadow: 2px 3px 5px 5px grey;
+}
+
+a.truncate-text:link, a.truncate-text:active, a.truncate-text:hover {
+  text-decoration: none;
+}
+
+#icons img {
+  max-width: 10rem;
+  min-width: 5rem;
+}
+
+section#portfolio .card {
+  min-width: 350px;
+  max-width: 350px;
+}
+
+section#portfolio .card-body {
+  word-break: break-all;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+}
+
+section#portfolio .card-title {
+  word-break: break-word;
+  overflow-wrap: break-all;
+}
+
+.card-text {
+  display: none;
+}
+
+
+
+section#resume div {
+  background-color: rgb(91, 155, 250);
+  color: rgb(255, 255, 255);
+}
+
+section#resume h2 {
+  color: rgb(255, 255, 255);
+}
+
+section#resume h3 {
+  color: rgb(0, 0, 0);
+}
+
+section {
+  transform-style: preserve-3d;
+}
+
+#resume img {
+  display: inline;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 1em;
+}
+
+
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1.4rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1.6rem;
+  }
+}

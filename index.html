@@ -23,13 +23,14 @@
     <meta name="description" content="Web Development and Design">
     <meta name="keywords" content="web developer, web designer, html, css, JavaScript developer, web agency, los angeles web design, web design firm">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <!--    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css"> -->
 
     <style>
       @import url('https://fonts.googleapis.com/css?family=Arima+Madurai:900|Inconsolata:900|Source+Code+Pro:400');
     </style>
-  </head>
+
+  <script type="text/javascript" src="dist/main.bundle.js"></script></head>
 
   <body>
 
@@ -65,10 +66,10 @@ to make come true...">Ask Me</a>
         <h2 class="font-weight-bold ml-md-3">Web Solutions and UX Design</h2>
       </div>
       <div id="middle">
-        <h3 class="font-weight-bold font-monospace text-right ml-md-3">kayvons@icloud.com | 805.551.1394</h3>
+        <h3 class="font-weight-bold font-monospace text-center ml-md-3">kayvons@icloud.com | 805.551.1394</h3>
       </div>
-      <div id="intro" class="container-fluid">
-        <h4 class="lead ml-md-3">Converting Websites into Lead Generation machines by designing and developing Innovative front end interfaces that entice user interactivity and build long-term brand loyalty. </h4>
+      <div id="intro" class="container-fluid mt-5">
+        <p class="lead ml-md-3 mt-5">Converting Websites into Lead Generation machines by designing and developing Innovative front end interfaces that entice user interactivity and build long-term brand loyalty. </p>
       </div>
 
       <header>
@@ -86,7 +87,7 @@ to make come true...">Ask Me</a>
 
           <div class="ml-5 float-right" id="mypicture">
           </div>
-          <h5 class="lead">Don’t be just be another website that goes stale, but a site that consistently conjures up new customers and keep ahead of your competition.<span id="seeMore">..</span>
+          <h5 class="p-3">Don’t be just be another website that goes stale, but a site that consistently conjures up new customers and keep ahead of your competition.<span id="seeMore">..</span>
         </h5>
 
           <div id="collapsableP" class="collapse">
@@ -102,34 +103,34 @@ to make come true...">Ask Me</a>
       </section>
 
       <section id="icons" class="container-fluid p-3 ">
-        <div class="row d-flex text-center w-100">
-          <div class="w-25 m-2"> <img class="img-fluid" src="assets/img/flyer.svg">
+        <div class="row d-flex flex-row flex-wrap justify-content-around text-center w-100">
+          <div class="m-2"> <img class="img-fluid" src="assets/img/flyer.svg">
             <h2>Branding</h2> </div>
 
-          <div class="w-25 m-2"> <img class="img-fluid" src="assets/img/packaging.svg">
+          <div class="m-2"> <img class="img-fluid" src="assets/img/packaging.svg">
             <h2>Business Development</h2>
           </div>
-          <div class="w-25 m-2"> <img class="img-fluid" src="assets/img/pencil-case.svg">
+          <div class="m-2"> <img class="img-fluid" src="assets/img/pencil-case.svg">
             <h2>Design and Development</h2> </div>
-          <div class="w-25 m-2"> <img class="img-fluid" src="assets/img/responsive-design-symbol.svg">
+          <div class="m-2"> <img class="img-fluid" src="assets/img/responsive-design-symbol.svg">
             <h2>User Interface Design (UX) </h2> </div>
-          <div class="w-25 m-2"> <img class="img-fluid" src="assets/img/squares.svg">
+          <div class="m-2"> <img class="img-fluid" src="assets/img/squares.svg">
             <h2>Workflow Automation</h2> </div>
-          <div class="w-25 m-2"> <img class="img-fluid" src="assets/img/wordpress-logo.svg">
+          <div class="m-2"> <img class="img-fluid" src="assets/img/wordpress-logo.svg">
             <h2>Content Management System</h2> </div>
         </div>
       </section>
 
       <section class="container-fluid" id="portfolio">
-        <h2 class="display-2">Portfolio</h2>
+        <h2 class="display-3">Portfolio</h2>
         <div class="row">
 
           <div class="card-deck flex-wrap">
 
             <div class="card-deck flex-wrap">
 
-              <div id="bevvBootstrap" class="card shadow mb-2 w-25" onclick="displayModal(event);">
-                <a class="btn btn-outline-light" role="button" data-toggle="modal" data-target="#iframeModal" data-frame="https://s3-us-west-1.amazonaws.com/bevv/index.html">
+              <div id="bevvBootstrap" class="card shadow mb-2 w-25">
+                <a class="btn btn-outline-light" role="button" data-toggle="modal" href="#iframeModal" data-frame="https://s3-us-west-1.amazonaws.com/bevv/index.html">
               <img class="card-img-top" src="assets/img/BevvPage.png" alt="Converting design file to a BootStrap file">
 
               <div class="card-body">
@@ -138,8 +139,8 @@ to make come true...">Ask Me</a>
               </div>
             </a>
               </div>
-              <div id="psdtohtml" class="card shadow mb-2 w-25" onclick="displayModal(event);">
-                <a class="btn btn-outline-light" role="button" data-toggle="modal" data-target="#iframeModal" data-frame="https://kayvonshahir.com/psdtohtmlexample/LosAngelesMtnPSDtoHTML/LosAngelesMtn.html">
+              <div id="psdtohtml" class="card shadow mb-2 w-25">
+                <a class="btn btn-outline-light" role="button" data-toggle="modal" href="#iframeModal" data-frame="https://kayvonshahir.com/psdtohtmlexample/LosAngelesMtnPSDtoHTML/LosAngelesMtn.html">
             <img class="card-img-top" src="assets/img/LosAngeles Mountains.png" alt="Converting PSD file to HTML using BootStrap framework">
 
             <div class="card-body">
@@ -148,8 +149,8 @@ to make come true...">Ask Me</a>
             </div>
           </a>
               </div>
-              <div id="topagentmagazine" class="card shadow mb-2 w-25" onclick="displayModal(event);">
-                <a class="btn btn-outline-light" role="button" data-toggle="modal" data-target="#iframeModal" data-frame="https://www.topagentmagazine.com/">
+              <div id="topagentmagazine" class="card shadow mb-2 w-25">
+                <a class="btn btn-outline-light" role="button" data-toggle="modal" href="#iframeModal" data-frame="https://www.topagentmagazine.com/">
             <img class="card-img-top" src="assets/img/topagentmagazine.png" alt="WordPress Customization and Plugin Installations">
 
             <div class="card-body">
@@ -158,8 +159,8 @@ to make come true...">Ask Me</a>
             </div>
           </a>
               </div>
-              <div id="themotherandsonteam" class="card shadow mb-2 w-25" onclick="displayModal(event);">
-                <a class="btn btn-outline-light" role="button" data-toggle="modal" data-target="#iframeModal" data-frame="https://themotherandsonteam.com">
+              <div id="themotherandsonteam" class="card shadow mb-2 w-25">
+                <a class="btn btn-outline-light" role="button" data-toggle="modal" href="#iframeModal" data-frame="https://themotherandsonteam.com">
             <img class="card-img-top" src="assets/img/themotherandsonteam.png" alt="Customization of Real Estate Websites">
 
             <div class="card-body">
@@ -169,8 +170,8 @@ to make come true...">Ask Me</a>
           </a>
               </div>
 
-              <div id="portfoliov1" class="card shadow mb-2 w-25" onclick="displayModal(event);">
-                <a class="btn btn-outline-light" role="button" data-toggle="modal" data-target="#iframeModal" data-frame="https://v1.kayvonshahir.com/">
+              <div id="portfoliov1" class="card shadow mb-2 w-25">
+                <a class="btn btn-outline-light" role="button" data-toggle="modal" href="#iframeModal" data-frame="https://v1.kayvonshahir.com/">
             <img class="card-img-top" src="assets/img/portfolio-v1.png" alt="The
             first iteration of my portfolio site exhibiting my CSS skils">
 
@@ -181,8 +182,8 @@ to make come true...">Ask Me</a>
           </a>
               </div>
 
-              <div id="simon-says" class="card shadow mb-2 w-25" onclick="displayModal(event);">
-                <a class="btn btn-outline-light" role="button" data-toggle="modal" data-target="#iframeModal" data-frame="https://codepen.io/k-von/embed/baEZZb/?height=353&theme-id=30680&default-tab=result&embed-version=2">
+              <div id="simon-says" class="card shadow mb-2 w-25">
+                <a class="btn btn-outline-light" role="button" data-toggle="modal" href="#iframeModal" data-frame="https://codepen.io/k-von/embed/baEZZb/?height=353&theme-id=30680&default-tab=result&embed-version=2">
             <img class="card-img-top" src="assets/img/Simon-Says.png" alt="using
             javascript wrote a Simon Says game">
             <div class="card-body">
@@ -192,8 +193,8 @@ to make come true...">Ask Me</a>
             </div>
           </a>
               </div>
-              <div id="wikepedia-viewer" class="card shadow mb-2 w-25" onclick="displayModal(event);">
-                <a class="btn btn-outline-light" role="button" data-toggle="modal" data-target="#iframeModal" data-frame="https://codepen.io/k-von/embed/xqZgMq/?theme-id=light&default-tab=result&embed-version=2">
+              <div id="wikepedia-viewer" class="card shadow mb-2 w-25">
+                <a class="btn btn-outline-light" role="button" data-toggle="modal" href="#iframeModal" data-frame="https://codepen.io/k-von/embed/xqZgMq/?theme-id=light&default-tab=result&embed-version=2">
             <img class="card-img-top" src="assets/img/wikipedia-viewer.png" alt="Assignment to create an API to Wikipedia">
 
             <div class="card-body">
@@ -204,7 +205,7 @@ to make come true...">Ask Me</a>
               </div>
 
               <div id="quote-generator" class="card shadow mb-2 w-25">
-                <a class="btn btn-outline-light" role="button" data-toggle="modal" data-target="#iframeModal" data-frame="https://codepen.io/k-von/embed/apryEw/?theme-id=light&default-tab=result&embed-version=2&fullscreen=yes">
+                <a class="btn btn-outline-light" role="button" data-toggle="modal" href="#iframeModal" data-frame="https://codepen.io/k-von/embed/apryEw/?theme-id=light&default-tab=result&embed-version=2&fullscreen=yes">
             <img class="card-img-top" src="assets/img/quotegenerrator.png" alt="Assignment to create a quote generator API">
             <div class="card-body">
               <h4 class="card-title"> Quote Generator </h4>
@@ -224,23 +225,23 @@ to make come true...">Ask Me</a>
 
       <section id="skills" class="x3">
         <div>
-          <h2 class="display-2">Technologies</h2>
+          <h2 class="display-3">Technologies</h2>
           <h3 class="lead">
     I am actively working with the following technologies, including frameworks
     for expedited deployment...</h3></div>
         <div class="container-fluid">
           <div class="row">
-            <div class="d-flex justify-content-between align-items-start">
-              <img class="img-fluid" src="assets/img/HTMLlogo.gif" alt="HTML Logo"> <img class="img-fluid" src="assets/img/js-logo.gif" alt="JavaScript Logo"> <img class="img-fluid" src="assets/img/css3.gif" alt="CSS Logo"> <img class="img-fluid" src="assets/img/jQurery.gif"
-                alt="JQuery Logo"> <img class="img-fluid" src="assets/img/bootstrap-logo.gif" alt="Bootstrap Logo">
+            <div class="d-flex flex-row flex-wrap justify-content-center align-items-center">
+              <img class="img-fluid p-3" src="assets/img/HTMLlogo.gif" alt="HTML Logo"> <img class="img-fluid p-3" src="assets/img/js-logo.gif" alt="JavaScript Logo"> <img class="img-fluid p-3" src="assets/img/css3.gif" alt="CSS Logo"> <img class="img-fluid p-3"
+                src="assets/img/jQurery.gif" alt="JQuery Logo"> <img class="img-fluid p-3" src="assets/img/bootstrap-logo.gif" alt="Bootstrap Logo">
             </div>
           </div>
         </div>
       </section>
       <section id="resume" class="x3">
         <div>
-          <h2 class="display-2">Resume</h2>
-          <h3>Download my work experience to learn more.</h3> <a href="myResume.pdf" download><img class="img-responsive" src="assets/img/download_icon.png" alt="Download Resume"></a>
+          <h2 class="display-3">Resume</h2>
+          <h3>Download my work experience to learn more.</h3> <a href="myResume.pdf" download><img class="img-fluid w-25" src="assets/img/download_icon.png" alt="Download Resume"></a>
 
         </div>
       </section>
@@ -281,9 +282,11 @@ to make come true...">Ask Me</a>
     </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <!--  <script src="bootstrap/dist/js/bootstrap.bundle.min.js" type="javascript"></script> -->
+
+
+
     <script>
       $("#iframeModal").on("show.bs.modal", function(event) {
         var footerText = $(event.relatedTarget).find(".card-text").text();
@@ -304,6 +307,8 @@ to make come true...">Ask Me</a>
         $("span#seeMore").toggle();
       });
     </script>
+
+
   </body>
 
 </html>
