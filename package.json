@@ -5,7 +5,10 @@
   "main": "index.js",
   "dependencies": {
     "bootstrap": "^4.1.0",
+    "express": "^4.16.3",
     "jquery": "^3.3.1",
+    "jsdom": "^11.10.0",
+    "node-waf": "^1.0.0",
     "popper.js": "^1.14.3",
     "precss": "^3.1.2",
     "watchpack": "^1.6.0"

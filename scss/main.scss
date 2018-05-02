@@ -28,6 +28,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Inconsolata', monospace;
   color: rgb(91, 155, 250);
+  letter-spacing: normal;
 
 }
 
@@ -115,7 +116,11 @@ header {
     line-height: 10rem;
 }
 
+.text-wrap {
 
+  overflow-wrap: break-word !important;
+
+}
 
 #topMiddle {
   position: absolute;
@@ -216,6 +221,7 @@ section.x2 #mypicture {
 
 a.truncate-text:link, a.truncate-text:active, a.truncate-text:hover {
   text-decoration: none;
+  outline: none;
 }
 
 #icons img {
@@ -226,17 +232,17 @@ a.truncate-text:link, a.truncate-text:active, a.truncate-text:hover {
 section#portfolio .card {
   min-width: 350px;
   max-width: 350px;
+  max-height: auto;
 }
 
 section#portfolio .card-body {
-  word-break: break-all;
-  overflow-wrap: break-word;
+  white-space: normal !important;
+  overflow-wrap: normal;
   overflow-x: hidden;
 }
 
 section#portfolio .card-title {
-  word-break: break-word;
-  overflow-wrap: break-all;
+
 }
 
 .card-text {
@@ -281,13 +287,13 @@ footer {
 
 @include media-breakpoint-up(sm) {
   html {
-    font-size: 1.2rem;
+    font-size: 0.98rem;
   }
 }
 
 @include media-breakpoint-up(md) {
   html {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 
