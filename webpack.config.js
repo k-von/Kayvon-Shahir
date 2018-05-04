@@ -1,18 +1,23 @@
-const path = require('path');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HTMLWebpackPlugin = require("html-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = {
   entry: './js/index.js',
-  plugins: [new HTMLWebpackPlugin({
-    title: 'Title',
-    template: './index.template.html',
-    inject: 'head',
-    filename: '../index.html'
-  })],
+  plugins: [
+    new CleanWebpackPlugin(['dist']),
+    new HTMLWebpackPlugin({
+      title: 'Title',
+      template: './index.template.html',
+      inject: 'head',
+      filename: '../index.html'
+    })
+
+  ],
   output: {
-    filename: 'dist/[name].bundle.js',
+    filename: '[name].bundle.js',
     chunkFilename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, './dist')
   },
   module: {
     rules: [{
@@ -33,12 +38,8 @@ module.exports = {
           loader: 'sass-loader'
         }
       ]
-    }, {
-      test: /\.(css)$/,
-      use: [{
-        loader: 'css-loader'
-      }]
     }]
+
 
   }
 

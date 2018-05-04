@@ -7,7 +7,7 @@
     font-family: 'Source Code Pro', monospace;
 
 /*/
-@import '~bootstrap/scss/_custom';
+@import '~bootstrap/scss/custom';
 @import '~bootstrap/scss/bootstrap';
 
 html {
@@ -283,7 +283,9 @@ footer {
   padding: 1em;
 }
 
-
+#iframeModal {
+  transform: translateZ(0.1px);
+}
 
 @include media-breakpoint-up(sm) {
   html {

@@ -1,6 +1,7 @@
+import _ from 'lodash';
+import 'bootstrap';
 window.$ = require('jquery');
 require('popper.js');
-import 'bootstrap';
 require('./custom.js');
 require('../scss/main.scss');
 
