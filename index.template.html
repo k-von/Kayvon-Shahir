@@ -11,12 +11,10 @@
     <meta name="description" content="Web Development and Design">
     <meta name="keywords" content="web developer, web designer, html, css, JavaScript developer, web agency, los angeles web design, web design firm">
 
-    <!--    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" type="text/css">
+    <!--<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/main.css" type="text/css"> -->
 
-    <style>
-      @import url('https://fonts.googleapis.com/css?family=Arima+Madurai:900|Inconsolata:900|Source+Code+Pro:400');
-    </style>
+
 
   </head>
 
@@ -44,7 +42,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </nav>
+    <div id="iframeModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="excerpt" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h3 class="modal-title"> This is header</h3>
+            <button class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
 
+            <iframe style="min-width: 700px; min-height: 500px;" sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-pointer-lock allow-top-navigation" scrolling="yes" src="https://kayvonshahir.com" frameborder="0"
+              referrerpolicy="unsafe-url">sorry, your browser doesn't support iframes, so you're not getting the full experience.
+              </iframe>
+          </div>
+          <div class="modal-footer">
+
+          </div>
+        </div>
+      </div>
+      "" </div>
     <div id="perspectiveContainer">
 
 
@@ -140,7 +156,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </a>
             </div>
             <div id="topagentmagazine" class="card shadow mb-2 w-25">
-              <a class="btn btn-outline-light" role="button" data-toggle="modal" href="#iframeModal" data-frame="https://www.topagentmagazine.com/">
+              <a class="btn btn-outline-light" role="button" onclick="javascript: eModal.iframe('https://www.topagentmagazine.com/', 'testing');">
             <img class="card-img-top" src="assets/img/topagentmagazine.png" alt="WordPress Customization and Plugin Installations">
 
             <div class="card-body">
@@ -244,32 +260,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </footer>
     </div>
 
-    <div id="iframeModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="excerpt" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header text-center">
-            <h3 class="modal-title"> This is header</h3>
-            <button class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span></button>
-          </div>
-          <div class="modal-body">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="embed-responsive embed-responsive-4by3" style="">
-                    <iframe class="embed-responsive-item" sandbox="allow-same-origin allow-modals allow-scripts allow-fullscreen" frameborder="0">sorry, your
-  browser doesn't support iframes, so you're not getting the full
-  experience.</iframe>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
 
-          </div>
-        </div>
-      </div>
-    </div>
 
 
     <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
@@ -278,24 +269,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
     <script>
-      $("#iframeModal").on("show.bs.modal", function(event) {
-        var footerText = $(event.relatedTarget).find(".card-text").text();
-        var headerText = $(event.relatedTarget).find(".card-title").text();
-        var frameSrc = $(event.relatedTarget).data("frame");
-        $(this).find("iframe").attr("src", frameSrc);
-        $(this).find(".modal-header h3").text(headerText);
-        $(this).find(".modal-footer").text(footerText);
-        $("#iframeModal").modal("handleUpdate");
-      });
-
-      $("#iframeModal").on("hide.bs.modal", function(event) {
-        $(this).find("iframe").attr("src", "");
-
-      });
-
-      $("#collapsableP").on("show.bs.collapse hide.bs.collapse", function(event) {
-        $("span#seeMore").toggle();
-      });
     </script>
 
 

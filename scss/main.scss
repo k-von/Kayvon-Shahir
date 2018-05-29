@@ -7,6 +7,8 @@
     font-family: 'Source Code Pro', monospace;
 
 /*/
+
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai:900|Inconsolata:900|Source+Code+Pro:400');
 @import '~bootstrap/scss/custom';
 @import '~bootstrap/scss/bootstrap';
 
@@ -40,6 +42,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
+
 }
 
 header {
@@ -284,7 +287,8 @@ footer {
 }
 
 #iframeModal {
-  transform: translateZ(0.1px);
+  min-height: 500px;
+  overflow-y: scroll !important;
 }
 
 @include media-breakpoint-up(sm) {
